@@ -1,17 +1,14 @@
-<p align="center">
+<div align="center">
   <img alt="preview image" src=".github/preview.png">
-</p>
+</div>
 
-<p align="center">
-  <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=00875F&labelColor=00B37E" alt="License">
+<div align="center">
+  <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=00875F&labelColor=00B37E" alt="License">
   
   <img src="https://img.shields.io/github/forks/NitoBa/the-movie-app?label=forks&message=MIT&color=00875F&labelColor=00B37E" alt="Forks">
 
   <img src="https://img.shields.io/github/stars/NitoBa/the-movie-app?label=stars&message=MIT&color=00875F&labelColor=00B37E" alt="Stars">
-</p>
-
-<h1 align="center">
-</h1>
+</div>
 
 <br>
 
@@ -20,7 +17,7 @@
 This project was developed using the following technologies:
 
 - [ReactJS](https://reactjs.org/)
-- [Vite](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
 - [TailwindCss](https://tailwindcss.com/)
 - [GraphQL](https://graphql.org/)
 - [GraphQLCodeGen](https://www.graphql-code-generator.com/)
