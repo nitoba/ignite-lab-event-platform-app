@@ -10,8 +10,7 @@
   <img src="https://img.shields.io/github/stars/NitoBa/the-movie-app?label=stars&message=MIT&color=00875F&labelColor=00B37E" alt="Stars">
 </div>
 
-<br>
-
+---
 ## 🧪 Technologies
 
 This project was developed using the following technologies:
@@ -24,8 +23,8 @@ This project was developed using the following technologies:
 - [GraphCMS](https://graphcms.com/)
 - [ReactHookForm](https://react-hook-form.com/)
 - [Yup](https://www.npmjs.com/package/yup)
-- 
 
+---
 ## 🚀 Getting started
 
 Clone the project and access the folder.
@@ -45,7 +44,7 @@ VITE_AUTH_TOKEN=your-auth-token
 `codegen.example.yaml`
 schema: your-api-url
 
-
+---
 ## 📚 Project execution
 
 ```bash
