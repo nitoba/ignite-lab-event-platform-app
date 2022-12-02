@@ -35,22 +35,30 @@ export const SubscribePage: React.FC = () => {
   const [createSubscribe, { loading: isLoading }] =
     useAddNewSubscriberMutation();
 
+    const handleNavigateToEvent = () => {
+      navigate("/event/lesson/aula-1-react-js-or-dominando-os-fundamentos-do-frontend");
+    }
+
   const onSubmit: SubmitHandler<IFormInputs> = async (data) => {
     const { name, email } = data;
 
-    const result = await createSubscribe({ variables: { name, email } });
-    if (result.errors) {
-      toast(`Something went wrong ${result.errors}`, {
-        type: "error",
+    try {
+      await createSubscribe({ variables: { name, email } });
+
+      toast("You have successfully subscribed!", {
+        type: "success",
       });
-      return;
+  
+      handleNavigateToEvent()
+    } catch (error: any) {
+      error.networkError.result.errors.forEach((error: any) => {
+        toast(`Something went wrong ${error.message}`, {
+          type: "error",
+        }); 
+
+      })
+
     }
-
-    toast("You have successfully subscribed!", {
-      type: "success",
-    });
-
-    navigate("/event/lesson/");
   };
 
   return (
@@ -111,6 +119,15 @@ export const SubscribePage: React.FC = () => {
                 disabled={isLoading}
               >
                 {isLoading ? <LoadingSpinner /> : " Garantir minha vaga"}
+              </button>
+
+              <button
+                type="submit"
+                className="rounded bg-green-500 uppercase flex items-center justify-center h-14 w-full mt-6 font-bold hover:brightness-90 transition-all duration-200 ease-in-out disabled:brightness-50 disabled:cursor-not-allowed"
+                disabled={isLoading}
+                onClick={handleNavigateToEvent}
+              >
+                Ir para pagina do evento
               </button>
             </div>
           </form>
